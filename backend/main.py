@@ -22,12 +22,17 @@ import blockchain as bc
 
 load_dotenv()
 
-API_PORT = int(os.getenv('API_PORT', 8000))
+API_PORT = int(os.getenv("PORT", os.getenv("API_PORT", 8000)))
+CORS_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv("CORS_ORIGINS", "*").split(",")
+    if origin.strip()
+]
 
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=CORS_ORIGINS or ["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -121,4 +126,4 @@ def status():
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run('main:app', host='0.0.0.0', port=API_PORT, reload=True)
+    uvicorn.run('main:app', host='0.0.0.0', port=API_PORT, reload=False)

@@ -1,10 +1,8 @@
-"""Simple Web3.py helpers to interact with the deployed contract.
-Requires environment variables for provider, contract address, and account credentials.
-"""
+"""Simple Web3.py helpers to interact with the deployed contract."""
 import os
+import json
 from dotenv import load_dotenv
 from web3 import Web3
-import json
 
 load_dotenv()
 
@@ -29,23 +27,24 @@ def get_contract():
     abi = load_abi()
     if not abi or not CONTRACT_ADDRESS:
         return None
-    return w3.eth.contract(address=Web3.toChecksumAddress(CONTRACT_ADDRESS), abi=abi)
+    return w3.eth.contract(address=Web3.to_checksum_address(CONTRACT_ADDRESS), abi=abi)
 
 
 def add_record(node_id: int, data_hash: str):
     """Call contract to add a record. Requires PRIVATE_KEY and ACCOUNT_ADDRESS in env."""
     contract = get_contract()
-    if contract is None:
+    if contract is None or not PRIVATE_KEY or not ACCOUNT_ADDRESS:
         return {"error": "contract or address not configured"}
     nonce = w3.eth.get_transaction_count(ACCOUNT_ADDRESS)
-    txn = contract.functions.addRecord(node_id, data_hash).buildTransaction({
+    txn = contract.functions.addRecord(node_id, data_hash).build_transaction({
         'from': ACCOUNT_ADDRESS,
         'nonce': nonce,
         'gas': 3000000,
-        'gasPrice': w3.toWei('1', 'gwei')
+        'gasPrice': w3.to_wei('1', 'gwei')
     })
     signed = w3.eth.account.sign_transaction(txn, private_key=PRIVATE_KEY)
-    tx_hash = w3.eth.send_raw_transaction(signed.rawTransaction)
+    raw_tx = getattr(signed, "raw_transaction", signed.rawTransaction)
+    tx_hash = w3.eth.send_raw_transaction(raw_tx)
     receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
     return dict(txHash=tx_hash.hex(), receipt=receipt)
 

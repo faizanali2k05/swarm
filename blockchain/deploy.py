@@ -1,4 +1,6 @@
-"""Compile and deploy the SwarmChain contract to a local Ganache instance.
+"""Compile and deploy the SwarmChain contract.
+
+Use Ganache for local testing or a Sepolia RPC URL for free cloud deployment.
 Produces an ABI JSON file that the backend can use.
 """
 import os
@@ -41,9 +43,15 @@ if not acct or not PRIVATE_KEY:
 
 Swarm = w3.eth.contract(abi=abi, bytecode=bytecode)
 nonce = w3.eth.get_transaction_count(acct)
-tx = Swarm.constructor().buildTransaction({'from': acct, 'nonce': nonce, 'gas': 4000000, 'gasPrice': w3.toWei('1', 'gwei')})
+tx = Swarm.constructor().build_transaction({
+    'from': acct,
+    'nonce': nonce,
+    'gas': 4000000,
+    'gasPrice': w3.to_wei('1', 'gwei')
+})
 signed = w3.eth.account.sign_transaction(tx, private_key=PRIVATE_KEY)
-tx_hash = w3.eth.send_raw_transaction(signed.rawTransaction)
+raw_tx = getattr(signed, "raw_transaction", signed.rawTransaction)
+tx_hash = w3.eth.send_raw_transaction(raw_tx)
 print('Deploying contract, tx:', tx_hash.hex())
 receipt = w3.eth.wait_for_transaction_receipt(tx_hash)
 print('Deployed at', receipt.contractAddress)
