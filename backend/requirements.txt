@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+torch
+scikit-learn
+web3
+python-dotenv
+requests
+py-solc-x
