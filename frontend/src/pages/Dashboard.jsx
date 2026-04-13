@@ -1,16 +1,28 @@
-import React, {useEffect, useState, useMemo} from 'react'
+import * as React from 'react'
 import axios from 'axios'
 import { Line } from 'react-chartjs-2'
-import Chart from 'chart.js/auto'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js'
+
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
 
 const API = import.meta.env.VITE_API_URL
 
 export default function Dashboard(){
-  const [status, setStatus] = useState({rounds:0, accuracies:[]})
-  const [loading, setLoading] = useState(false)
-  const [records, setRecords] = useState([])
+  console.debug('React hooks', { useState: typeof React.useState, useEffect: typeof React.useEffect, useMemo: typeof React.useMemo })
+  const [status, setStatus] = React.useState({rounds:0, accuracies:[]})
+  const [loading, setLoading] = React.useState(false)
+  const [records, setRecords] = React.useState([])
 
-  useEffect(()=>{ fetchAll(); const t = setInterval(fetchAll, 5000); return ()=>clearInterval(t) }, [])
+  React.useEffect(()=>{ fetchAll(); const t = setInterval(fetchAll, 5000); return ()=>clearInterval(t) }, [])
 
   async function fetchAll(){
     try{
@@ -26,13 +38,13 @@ export default function Dashboard(){
     setTimeout(()=>{ fetchAll(); setLoading(false) }, 2000)
   }
 
-  const contribs = useMemo(()=>{
-    const map = {}
+  const contribs = React.useMemo(()=>{
+    const map = {};
     (records || []).forEach(r=>{ map[r.nodeId] = (map[r.nodeId]||0)+1 })
     return Object.entries(map).map(([id,c])=>({id, count:c}))
   }, [records])
 
-  const data = useMemo(()=>({
+  const data = React.useMemo(()=>({
     labels: status.accuracies.map((_,i)=> 'R' + (i+1)),
     datasets: [{ label: 'Accuracy', data: status.accuracies, borderColor: '#60a5fa', backgroundColor: 'rgba(96,165,250,0.12)', tension:0.25 }]
   }), [status])
