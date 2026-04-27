@@ -16,7 +16,8 @@ w3 = Web3(Web3.HTTPProvider(WEB3_PROVIDER))
 
 def load_abi():
     here = os.path.dirname(__file__)
-    abi_path = os.path.join(here, '..', 'blockchain', 'SwarmChain_abi.json')
+    default_path = os.path.join(here, '..', 'blockchain', 'SwarmChain_abi.json')
+    abi_path = os.getenv('ABI_PATH', default_path)
     if not os.path.exists(abi_path):
         return None
     with open(abi_path, 'r') as f:

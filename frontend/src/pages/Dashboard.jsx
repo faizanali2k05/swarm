@@ -44,10 +44,17 @@ export default function Dashboard(){
     return Object.entries(map).map(([id,c])=>({id, count:c}))
   }, [records])
 
-  const data = React.useMemo(()=>({
-    labels: status.accuracies.map((_,i)=> 'R' + (i+1)),
-    datasets: [{ label: 'Accuracy', data: status.accuracies, borderColor: '#60a5fa', backgroundColor: 'rgba(96,165,250,0.12)', tension:0.25 }]
-  }), [status])
+  const data = React.useMemo(()=>{
+    const fedavg = status.fedavg_accuracies || status.accuracies || []
+    const naive = status.naive_accuracies || []
+    return {
+      labels: fedavg.map((_,i)=> 'R' + (i+1)),
+      datasets: [
+        { label: 'FedAvg (sample-weighted)', data: fedavg, borderColor: '#60a5fa', backgroundColor: 'rgba(96,165,250,0.12)', tension:0.25 },
+        { label: 'Naive equal-weight avg',   data: naive,  borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,0.10)', borderDash: [6,4], tension:0.25 },
+      ]
+    }
+  }, [status])
 
   return (
     <div className="container">
@@ -81,7 +88,7 @@ export default function Dashboard(){
 
           <div className="card">
             <h3 style={{marginTop:0}}>Notes</h3>
-            <div className="small">This demo runs small local nodes that train briefly and submit flattened weights. The backend averages weights and optionally logs dataset hashes on-chain.</div>
+            <div className="small">3 nodes train locally on hospital readmission data, partitioned 2/3, 1/6, 1/6. The backend never sees raw data — only flat weights, dataset hashes, and sample counts. FedAvg weights each node's contribution by its sample count; the dashed line shows what naive equal-weight averaging would yield instead.</div>
           </div>
         </div>
 

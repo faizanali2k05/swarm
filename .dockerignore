@@ -1,0 +1,18 @@
+# Don't ship local venvs, caches, build artifacts, secrets, or git history into images.
+**/.venv
+**/venv
+**/env
+**/__pycache__
+**/*.pyc
+**/node_modules
+**/dist
+**/build
+**/.env
+**/.env.*
+.git
+.gitignore
+*.log
+
+# The master CSV is only used by scripts/split_dataset.py at offline setup time —
+# never inside backend or node images. Each node image gets only its own slice.
+data/hospital_data_analysis.csv

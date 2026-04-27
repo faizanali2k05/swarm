@@ -1,0 +1,165 @@
+Patient_ID,Age,Gender,Condition,Procedure,Cost,Length_of_Stay,Readmission,Outcome,Satisfaction
+173,45,Male,Fractured Leg,Cast and Physical Therapy,3000,17,No,Recovered,4
+247,45,Female,Appendicitis,Appendectomy,8000,20,No,Recovered,3
+981,72,Male,Hypertension,Medication and Counseling,1000,69,No,Stable,4
+16,55,Female,Heart Disease,Angioplasty,15000,6,Yes,Recovered,3
+563,45,Male,Fractured Leg,Cast and Physical Therapy,3000,43,No,Recovered,4
+52,60,Female,Appendicitis,Appendectomy,8000,7,Yes,Recovered,3
+693,30,Female,Fractured Arm,X-Ray and Splint,500,47,No,Recovered,5
+573,30,Female,Fractured Arm,X-Ray and Splint,500,39,No,Recovered,5
+461,52,Female,Respiratory Infection,Antibiotics and Rest,800,32,No,Stable,4
+79,78,Male,Stroke,CT Scan and Medication,10000,12,No,Stable,2
+260,53,Female,Cancer,Surgery and Chemotherapy,25000,27,Yes,Recovered,4
+886,55,Female,Heart Disease,Angioplasty,15000,64,Yes,Recovered,3
+717,67,Male,Prostate Cancer,Radiation Therapy,20000,56,No,Recovered,3
+191,52,Female,Respiratory Infection,Antibiotics and Rest,800,14,No,Stable,4
+828,35,Female,Fractured Arm,X-Ray and Splint,500,56,Yes,Recovered,5
+146,52,Female,Respiratory Infection,Antibiotics and Rest,800,11,No,Stable,4
+966,68,Male,Hypertension,Medication and Counseling,1000,68,No,Stable,4
+813,30,Female,Fractured Arm,X-Ray and Splint,500,55,No,Recovered,5
+705,65,Female,Osteoarthritis,Physical Therapy and Pain Management,4000,51,No,Stable,4
+923,45,Male,Fractured Leg,Cast and Physical Therapy,3000,67,No,Recovered,4
+259,78,Male,Stroke,CT Scan and Medication,10000,24,No,Stable,2
+113,45,Male,Fractured Leg,Cast and Physical Therapy,3000,13,No,Recovered,4
+353,45,Male,Fractured Leg,Cast and Physical Therapy,3000,29,No,Recovered,4
+420,60,Female,Osteoarthritis,Physical Therapy and Pain Management,4000,32,No,Stable,4
+64,70,Male,Stroke,CT Scan and Medication,10000,11,Yes,Stable,2
+102,58,Male,Prostate Cancer,Radiation Therapy,20000,15,No,Recovered,3
+673,32,Female,Childbirth,Delivery and Postnatal Care,12000,47,No,Recovered,4
+681,72,Male,Hypertension,Medication and Counseling,1000,49,No,Stable,4
+56,52,Female,Respiratory Infection,Antibiotics and Rest,800,5,No,Stable,4
+487,45,Female,Appendicitis,Appendectomy,8000,36,No,Recovered,3
+428,40,Male,Fractured Leg,Cast and Physical Therapy,3000,34,No,Recovered,4
+754,70,Male,Stroke,CT Scan and Medication,10000,58,Yes,Stable,2
+369,78,Female,Heart Attack,Cardiac Catheterization,18000,32,Yes,Stable,2
+449,50,Male,Kidney Stones,Lithotripsy,6000,33,No,Recovered,3
+686,52,Female,Respiratory Infection,Antibiotics and Rest,800,47,No,Stable,4
+946,55,Female,Heart Disease,Angioplasty,15000,68,Yes,Recovered,3
+98,40,Male,Fractured Leg,Cast and Physical Therapy,3000,12,No,Recovered,4
+198,35,Female,Fractured Arm,X-Ray and Splint,500,14,Yes,Recovered,5
+424,70,Male,Stroke,CT Scan and Medication,10000,36,Yes,Stable,2
+709,78,Male,Stroke,CT Scan and Medication,10000,55,No,Stable,2
+253,32,Female,Childbirth,Delivery and Postnatal Care,12000,19,No,Recovered,4
+493,32,Female,Childbirth,Delivery and Postnatal Care,12000,35,No,Recovered,4
+601,48,Female,Heart Disease,Angioplasty,15000,45,Yes,Recovered,4
+594,75,Female,Heart Attack,Cardiac Catheterization,18000,47,Yes,Stable,2
+138,35,Female,Fractured Arm,X-Ray and Splint,500,10,Yes,Recovered,5
+810,60,Female,Osteoarthritis,Physical Therapy and Pain Management,4000,58,No,Stable,4
+223,32,Female,Childbirth,Delivery and Postnatal Care,12000,17,No,Recovered,4
+766,55,Female,Heart Disease,Angioplasty,15000,56,Yes,Recovered,3
+697,45,Female,Appendicitis,Appendectomy,8000,52,No,Recovered,3
+290,53,Female,Cancer,Surgery and Chemotherapy,25000,29,Yes,Recovered,4
+248,40,Male,Fractured Leg,Cast and Physical Therapy,3000,22,No,Recovered,4
+535,28,Male,Allergic Reaction,Epinephrine Injection,100,36,No,Recovered,5
+728,40,Male,Fractured Leg,Cast and Physical Therapy,3000,54,No,Recovered,4
+344,55,Male,Kidney Stones,Lithotripsy,6000,26,No,Recovered,3
+872,65,Male,Diabetes,Insulin Therapy,2000,61,No,Stable,3
+71,52,Female,Respiratory Infection,Antibiotics and Rest,800,6,No,Stable,4
+874,70,Male,Stroke,CT Scan and Medication,10000,66,Yes,Stable,2
+62,65,Male,Diabetes,Insulin Therapy,2000,7,No,Stable,3
+657,67,Male,Prostate Cancer,Radiation Therapy,20000,52,No,Recovered,3
+74,55,Male,Kidney Stones,Lithotripsy,6000,8,No,Recovered,3
+8,40,Male,Fractured Leg,Cast and Physical Therapy,3000,6,No,Recovered,4
+968,40,Male,Fractured Leg,Cast and Physical Therapy,3000,70,No,Recovered,4
+927,67,Male,Prostate Cancer,Radiation Therapy,20000,70,No,Recovered,3
+239,50,Male,Kidney Stones,Lithotripsy,6000,19,No,Recovered,3
+577,45,Female,Appendicitis,Appendectomy,8000,44,No,Recovered,3
+613,32,Female,Childbirth,Delivery and Postnatal Care,12000,43,No,Recovered,4
+22,60,Female,Appendicitis,Appendectomy,8000,5,Yes,Recovered,3
+352,60,Female,Appendicitis,Appendectomy,8000,27,Yes,Recovered,3
+826,55,Female,Heart Disease,Angioplasty,15000,60,Yes,Recovered,3
+234,75,Female,Heart Attack,Cardiac Catheterization,18000,23,Yes,Stable,2
+258,35,Female,Fractured Arm,X-Ray and Splint,500,18,Yes,Recovered,5
+126,68,Male,Hypertension,Medication and Counseling,1000,10,No,Stable,4
+470,53,Female,Cancer,Surgery and Chemotherapy,25000,41,Yes,Recovered,4
+538,35,Female,Childbirth,Delivery and Postnatal Care,12000,38,No,Recovered,4
+456,68,Male,Hypertension,Medication and Counseling,1000,32,No,Stable,4
+786,68,Male,Hypertension,Medication and Counseling,1000,56,No,Stable,4
+972,58,Male,Prostate Cancer,Radiation Therapy,20000,73,No,Recovered,3
+699,78,Female,Heart Attack,Cardiac Catheterization,18000,54,Yes,Stable,2
+843,30,Female,Fractured Arm,X-Ray and Splint,500,57,No,Recovered,5
+325,28,Male,Allergic Reaction,Epinephrine Injection,100,22,No,Recovered,5
+743,45,Male,Fractured Leg,Cast and Physical Therapy,3000,55,No,Recovered,4
+209,50,Male,Kidney Stones,Lithotripsy,6000,17,No,Recovered,3
+718,35,Female,Childbirth,Delivery and Postnatal Care,12000,50,No,Recovered,4
+783,30,Female,Fractured Arm,X-Ray and Splint,500,53,No,Recovered,5
+866,52,Female,Respiratory Infection,Antibiotics and Rest,800,59,No,Stable,4
+441,72,Male,Hypertension,Medication and Counseling,1000,31,No,Stable,4
+632,65,Male,Diabetes,Insulin Therapy,2000,45,No,Stable,3
+550,25,Male,Allergic Reaction,Epinephrine Injection,100,37,No,Recovered,5
+855,65,Female,Osteoarthritis,Physical Therapy and Pain Management,4000,61,No,Stable,4
+172,60,Female,Appendicitis,Appendectomy,8000,15,Yes,Recovered,3
+572,65,Male,Diabetes,Insulin Therapy,2000,41,No,Stable,3
+495,65,Female,Osteoarthritis,Physical Therapy and Pain Management,4000,37,No,Stable,4
+687,67,Male,Prostate Cancer,Radiation Therapy,20000,54,No,Recovered,3
+134,55,Male,Kidney Stones,Lithotripsy,6000,12,No,Recovered,3
+131,52,Female,Respiratory Infection,Antibiotics and Rest,800,10,No,Stable,4
+555,65,Female,Osteoarthritis,Physical Therapy and Pain Management,4000,41,No,Stable,4
+72,58,Male,Prostate Cancer,Radiation Therapy,20000,13,No,Recovered,3
+506,52,Female,Respiratory Infection,Antibiotics and Rest,800,35,No,Stable,4
+762,58,Male,Prostate Cancer,Radiation Therapy,20000,59,No,Recovered,3
+89,50,Male,Kidney Stones,Lithotripsy,6000,9,No,Recovered,3
+933,30,Female,Fractured Arm,X-Ray and Splint,500,63,No,Recovered,5
+865,28,Male,Allergic Reaction,Epinephrine Injection,100,58,No,Recovered,5
+251,52,Female,Respiratory Infection,Antibiotics and Rest,800,18,No,Stable,4
+61,48,Female,Heart Disease,Angioplasty,15000,9,Yes,Recovered,4
+250,25,Male,Allergic Reaction,Epinephrine Injection,100,17,No,Recovered,5
+320,53,Female,Cancer,Surgery and Chemotherapy,25000,31,Yes,Recovered,4
+378,35,Female,Fractured Arm,X-Ray and Splint,500,26,Yes,Recovered,5
+807,67,Male,Prostate Cancer,Radiation Therapy,20000,62,No,Recovered,3
+20,53,Female,Cancer,Surgery and Chemotherapy,25000,11,Yes,Recovered,4
+509,50,Male,Kidney Stones,Lithotripsy,6000,37,No,Recovered,3
+337,45,Female,Appendicitis,Appendectomy,8000,26,No,Recovered,3
+624,75,Female,Heart Attack,Cardiac Catheterization,18000,49,Yes,Stable,2
+1,45,Female,Heart Disease,Angioplasty,15000,5,No,Recovered,4
+553,32,Female,Childbirth,Delivery and Postnatal Care,12000,39,No,Recovered,4
+562,60,Female,Appendicitis,Appendectomy,8000,43,Yes,Recovered,3
+168,35,Female,Fractured Arm,X-Ray and Splint,500,12,Yes,Recovered,5
+389,50,Male,Kidney Stones,Lithotripsy,6000,29,No,Recovered,3
+833,45,Male,Fractured Leg,Cast and Physical Therapy,3000,61,No,Recovered,4
+974,55,Male,Kidney Stones,Lithotripsy,6000,68,No,Recovered,3
+893,45,Male,Fractured Leg,Cast and Physical Therapy,3000,65,No,Recovered,4
+951,72,Male,Hypertension,Medication and Counseling,1000,67,No,Stable,4
+1000,25,Male,Allergic Reaction,Epinephrine Injection,100,68,No,Recovered,5
+311,52,Female,Respiratory Infection,Antibiotics and Rest,800,22,No,Stable,4
+651,72,Male,Hypertension,Medication and Counseling,1000,47,No,Stable,4
+110,53,Female,Cancer,Surgery and Chemotherapy,25000,17,Yes,Recovered,4
+528,35,Female,Fractured Arm,X-Ray and Splint,500,36,Yes,Recovered,5
+186,68,Male,Hypertension,Medication and Counseling,1000,14,No,Stable,4
+794,55,Male,Kidney Stones,Lithotripsy,6000,56,No,Recovered,3
+521,52,Female,Respiratory Infection,Antibiotics and Rest,800,36,No,Stable,4
+849,78,Female,Heart Attack,Cardiac Catheterization,18000,64,Yes,Stable,2
+749,50,Male,Kidney Stones,Lithotripsy,6000,53,No,Recovered,3
+752,65,Male,Diabetes,Insulin Therapy,2000,53,No,Stable,3
+4,75,Male,Stroke,CT Scan and Medication,10000,7,Yes,Stable,2
+908,40,Male,Fractured Leg,Cast and Physical Therapy,3000,66,No,Recovered,4
+164,55,Male,Kidney Stones,Lithotripsy,6000,14,No,Recovered,3
+453,30,Female,Fractured Arm,X-Ray and Splint,500,31,No,Recovered,5
+931,48,Female,Heart Disease,Angioplasty,15000,67,Yes,Recovered,4
+999,78,Female,Heart Attack,Cardiac Catheterization,18000,74,Yes,Stable,2
+955,28,Male,Allergic Reaction,Epinephrine Injection,100,64,No,Recovered,5
+668,40,Male,Fractured Leg,Cast and Physical Therapy,3000,50,No,Recovered,4
+801,72,Male,Hypertension,Medication and Counseling,1000,57,No,Stable,4
+898,35,Female,Childbirth,Delivery and Postnatal Care,12000,62,No,Recovered,4
+781,48,Female,Heart Disease,Angioplasty,15000,57,Yes,Recovered,4
+936,68,Male,Hypertension,Medication and Counseling,1000,66,No,Stable,4
+710,53,Female,Cancer,Surgery and Chemotherapy,25000,57,Yes,Recovered,4
+119,50,Male,Kidney Stones,Lithotripsy,6000,11,No,Recovered,3
+751,48,Female,Heart Disease,Angioplasty,15000,55,Yes,Recovered,4
+829,78,Male,Stroke,CT Scan and Medication,10000,63,No,Stable,2
+12,65,Male,Prostate Cancer,Radiation Therapy,20000,9,No,Recovered,3
+576,68,Male,Hypertension,Medication and Counseling,1000,42,No,Stable,4
+262,60,Female,Appendicitis,Appendectomy,8000,21,Yes,Recovered,3
+551,52,Female,Respiratory Infection,Antibiotics and Rest,800,38,No,Stable,4
+488,40,Male,Fractured Leg,Cast and Physical Therapy,3000,38,No,Recovered,4
+827,62,Male,Diabetes,Insulin Therapy,2000,58,No,Stable,4
+397,45,Female,Appendicitis,Appendectomy,8000,30,No,Recovered,3
+401,52,Female,Respiratory Infection,Antibiotics and Rest,800,28,No,Stable,4
+67,45,Female,Appendicitis,Appendectomy,8000,8,No,Recovered,3
+621,72,Male,Hypertension,Medication and Counseling,1000,45,No,Stable,4
+956,52,Female,Respiratory Infection,Antibiotics and Rest,800,65,No,Stable,4
+708,35,Female,Fractured Arm,X-Ray and Splint,500,48,Yes,Recovered,5
+825,65,Female,Osteoarthritis,Physical Therapy and Pain Management,4000,59,No,Stable,4
+958,35,Female,Childbirth,Delivery and Postnatal Care,12000,66,No,Recovered,4
+653,45,Male,Fractured Leg,Cast and Physical Therapy,3000,49,No,Recovered,4
+159,78,Female,Heart Attack,Cardiac Catheterization,18000,18,Yes,Stable,2

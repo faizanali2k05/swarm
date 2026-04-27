@@ -1,0 +1,69 @@
+{
+  "numeric": [
+    "Age",
+    "Cost",
+    "Length_of_Stay",
+    "Satisfaction"
+  ],
+  "numeric_mean": {
+    "Age": 53.75406504065041,
+    "Cost": 8367.479674796748,
+    "Length_of_Stay": 37.66361788617886,
+    "Satisfaction": 3.5985772357723578
+  },
+  "numeric_std": {
+    "Age": 14.94113521815387,
+    "Cost": 7761.990976300386,
+    "Length_of_Stay": 19.59580522513659,
+    "Satisfaction": 0.883002143532675
+  },
+  "categorical": {
+    "Gender": [
+      "Female",
+      "Male"
+    ],
+    "Condition": [
+      "Allergic Reaction",
+      "Appendicitis",
+      "Cancer",
+      "Childbirth",
+      "Diabetes",
+      "Fractured Arm",
+      "Fractured Leg",
+      "Heart Attack",
+      "Heart Disease",
+      "Hypertension",
+      "Kidney Stones",
+      "Osteoarthritis",
+      "Prostate Cancer",
+      "Respiratory Infection",
+      "Stroke"
+    ],
+    "Procedure": [
+      "Angioplasty",
+      "Antibiotics and Rest",
+      "Appendectomy",
+      "CT Scan and Medication",
+      "Cardiac Catheterization",
+      "Cast and Physical Therapy",
+      "Delivery and Postnatal Care",
+      "Epinephrine Injection",
+      "Insulin Therapy",
+      "Lithotripsy",
+      "Medication and Counseling",
+      "Physical Therapy and Pain Management",
+      "Radiation Therapy",
+      "Surgery and Chemotherapy",
+      "X-Ray and Splint"
+    ]
+  },
+  "label": "Readmission",
+  "label_classes": [
+    "No",
+    "Yes"
+  ],
+  "drop": [
+    "Patient_ID",
+    "Outcome"
+  ]
+}

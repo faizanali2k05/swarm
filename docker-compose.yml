@@ -1,0 +1,90 @@
+# Stand up the full federated demo locally:
+#     docker compose up --build
+#
+# Runs:
+#   - backend (FastAPI aggregator)
+#   - 3 node containers, each with ONLY its own slice of the dataset
+#   - frontend (Vite SPA → nginx)
+#
+# Prerequisite: run `python scripts/split_dataset.py` once first so
+# data/node{1,2,3}_data.csv and data/schema.json exist.
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: swarmchain-backend
+    container_name: swarmchain-backend
+    ports:
+      - "8000:8000"
+    environment:
+      API_PORT: 8000
+      CORS_ORIGINS: "*"
+      NUM_NODES_PER_ROUND: 3
+    restart: unless-stopped
+
+  node1:
+    build:
+      context: .
+      dockerfile: nodes/Dockerfile
+      args:
+        NODE_ID: 1
+    image: swarmchain-node1
+    container_name: swarmchain-node1
+    environment:
+      NODE_ID: 1
+      API_URL: http://backend:8000
+      LOOP: "true"
+      ROUND_INTERVAL: 60
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  node2:
+    build:
+      context: .
+      dockerfile: nodes/Dockerfile
+      args:
+        NODE_ID: 2
+    image: swarmchain-node2
+    container_name: swarmchain-node2
+    environment:
+      NODE_ID: 2
+      API_URL: http://backend:8000
+      LOOP: "true"
+      ROUND_INTERVAL: 60
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  node3:
+    build:
+      context: .
+      dockerfile: nodes/Dockerfile
+      args:
+        NODE_ID: 3
+    image: swarmchain-node3
+    container_name: swarmchain-node3
+    environment:
+      NODE_ID: 3
+      API_URL: http://backend:8000
+      LOOP: "true"
+      ROUND_INTERVAL: 60
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        VITE_API_URL: http://localhost:8000
+    image: swarmchain-frontend
+    container_name: swarmchain-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
